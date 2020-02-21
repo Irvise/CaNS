@@ -45,7 +45,6 @@ real(rp)         , dimension(0:1,3)   ::   bcpre
 real(rp), dimension(3) :: bforce
 logical , dimension(3) :: is_forced
 real(rp), dimension(3) :: velf
-logical , dimension(0:1,3) :: is_outflow
 !
 integer , dimension(3) :: ng
 integer , dimension(3) :: n
@@ -83,7 +82,6 @@ contains
         read(iunit,*)  bforce(1),bforce(2),bforce(3)
         read(iunit,*)  is_forced(1),is_forced(2),is_forced(3)
         read(iunit,*)  velf(1),velf(2),velf(3)
-        read(iunit,*)  is_outflow(0,1),is_outflow(1,1),is_outflow(0,2),is_outflow(1,2),is_outflow(0,3),is_outflow(1,3)
         read(iunit,*) dims(1),dims(2)
         read(iunit,*) nthreadsmax
       else
